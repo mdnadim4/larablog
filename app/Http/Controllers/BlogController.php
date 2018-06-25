@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Blog;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
+use phpDocumentor\Reflection\DocBlock\Tags\See;
 
 class BlogController extends Controller
 {
@@ -61,4 +62,24 @@ class BlogController extends Controller
         Session::flash("success", "Data Deleted Sucessfully");
         return redirect('blogs');
     }
+
+    public function trash(){
+        $trashed = Blog::onlyTrashed()->get();
+        return view('blogs.trash', compact('trashed'));
+    }
+
+    public function restore($id){
+        $restored = Blog::onlyTrashed()->findOrFail($id);
+        $restored->restore();
+        Session::flash("success", "Data Sucessfully Restored");
+        return back();
+    }
+
+    public function permanentDelete($id){
+        $permanentdelete = Blog::onlyTrashed()->findOrFail($id);
+        $permanentdelete->forceDelete();
+        Session::flash("success", "Data Sucessfully Permanently Deleted");
+        return back();
+    }
+
 }

@@ -34,7 +34,8 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto text-center">
                         <li><a href="{{route('blogs')}}" class="btn btn-secondary text-white mr-2">Home</a></li>
-                        <li><a href="{{route('blogs.create')}}" class="btn btn-secondary text-white">Create</a></li>
+                        <li><a href="{{route('blogs.create')}}" class="btn btn-secondary text-white mr-2">Create</a></li>
+                        <li><a href="{{route('blogs.trash')}}" class="btn btn-secondary text-white">Trash</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
