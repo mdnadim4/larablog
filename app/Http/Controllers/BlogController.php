@@ -71,7 +71,7 @@ class BlogController extends Controller
     public function restore($id){
         $restored = Blog::onlyTrashed()->findOrFail($id);
         $restored->restore();
-        Session::flash("success", "Data Sucessfully Restored");
+        Session::flash("success", "Data Restored Sucessfully");
         return back();
     }
 

@@ -6,3 +6,7 @@
 .jumbotron{
     margin: -23px;
 }
+
+a:hover{
+    text-decoration: none;
+}

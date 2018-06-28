@@ -18,8 +18,9 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}"/>
+    {{--<link href="{{ asset('css/app.css') }}" rel="stylesheet">--}}
+    {{--<link rel="stylesheet" href="{{ asset('css/style.css') }}"/>--}}
+    <link rel="stylesheet" href="{{ asset('css/all.css') }}"/>
 </head>
 <body>
     <div id="app">
@@ -34,8 +35,9 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto text-center">
                         <li><a href="{{route('blogs')}}" class="btn btn-secondary text-white mr-2">Home</a></li>
-                        <li><a href="{{route('blogs.create')}}" class="btn btn-secondary text-white mr-2">Create</a></li>
-                        <li><a href="{{route('blogs.trash')}}" class="btn btn-secondary text-white">Trash</a></li>
+                        {{--<li><a href="{{route('blogs.create')}}" class="btn btn-secondary text-white mr-2">Create</a></li>--}}
+                        {{--<li><a href="{{route('blogs.trash')}}" class="btn btn-secondary text-white">Trash</a></li>--}}
+                        <li><a href="{{route('admin.index')}}" class="btn btn-secondary text-white">Admin</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
